@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>ru.cooper</groupId>
+		<artifactId>library</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>file-service</artifactId>
+
+	<name>file-service</name>
+
+	<properties>
+		<java.version>23</java.version>
+		<pdfbox.version>3.0.4</pdfbox.version>
+		<tika-core.version>3.1.0</tika-core.version>
+		<spring-cloud-aws-starter.version>3.1.1</spring-cloud-aws-starter.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- Spring Boot Starter Web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Работа с файлами -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+		<!-- Amazon S3 для хранения файлов -->
+		<dependency>
+			<groupId>io.awspring.cloud</groupId>
+			<artifactId>spring-cloud-aws-starter</artifactId>
+			<version>${spring-cloud-aws-starter.version}</version>
+		</dependency>
+
+		<!-- PDFBox для работы с PDF -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>${pdfbox.version}</version>
+		</dependency>
+
+		<!-- EPUB -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>${tika-core.version}</version>
+		</dependency>
+
+		<!-- Spring test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Общий модуль -->
+		<dependency>
+			<groupId>ru.cooper</groupId>
+			<artifactId>common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

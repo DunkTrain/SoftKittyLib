@@ -1,0 +1,39 @@
+# Исключаем Maven артефакты сборки
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Исключаем файлы IDE (IntelliJ IDEA, VS Code, NetBeans, Eclipse)
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.nb-gradle/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+
+# Исключаем кэш и временные файлы
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+springBeans/
+.sts4-cache
+
+# Исключаем файлы сборки Gradle (если случайно используются)
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Исключаем файлы OS (Windows, Mac)
+Thumbs.db
+.DS_Store
+
+# Исключаем Maven Wrapper файлы
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
