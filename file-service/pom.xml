@@ -15,7 +15,7 @@
 	<name>file-service</name>
 
 	<properties>
-		<java.version>23</java.version>
+		<java.version>21</java.version>
 		<pdfbox.version>3.0.4</pdfbox.version>
 		<tika-core.version>3.1.0</tika-core.version>
 		<spring-cloud-aws-starter.version>3.1.1</spring-cloud-aws-starter.version>
@@ -56,16 +56,10 @@
 			<version>${tika-core.version}</version>
 		</dependency>
 
-		<!-- Spring test -->
+		<!-- Eureka Client -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<!-- Общий модуль -->

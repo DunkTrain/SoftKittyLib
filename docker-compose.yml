@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+
+  postgres-user:
+    image: postgres:latest
+    container_name: postgres-user
+    restart: always
+    environment:
+      POSTGRES_DB: user_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+
+  postgres-library:
+    image: postgres:latest
+    container_name: postgres-library
+    restart: always
+    environment:
+      POSTGRES_DB: library_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - backend
+
+  postgres-reading:
+    image: postgres:latest
+    container_name: postgres-reading
+    restart: always
+    environment:
+      POSTGRES_DB: reading_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

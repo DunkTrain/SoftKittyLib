@@ -10,36 +10,19 @@
 		<version>1.0.0</version>
 	</parent>
 
-	<artifactId>api-gateway</artifactId>
+	<artifactId>eureka-server</artifactId>
 
-	<name>api-gateway</name>
+	<name>eureka-server</name>
 
 	<properties>
 		<java.version>21</java.version>
-		<spring-cloud.version>2024.0.0</spring-cloud.version>
 	</properties>
 
 	<dependencies>
-
-		<!-- Spring Cloud Gateway -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-
-		<!-- Общий модуль -->
-		<dependency>
-			<groupId>ru.cooper</groupId>
-			<artifactId>common</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<!-- Eureka Client -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-
 	</dependencies>
 
 	<build>

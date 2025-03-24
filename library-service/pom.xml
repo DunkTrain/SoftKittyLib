@@ -15,7 +15,7 @@
 	<name>library-service</name>
 
 	<properties>
-		<java.version>23</java.version>
+		<java.version>21</java.version>
 	</properties>
 
 	<dependencies>
@@ -45,11 +45,10 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Spring test -->
+		<!-- Eureka Client -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<!-- Общий модуль -->
